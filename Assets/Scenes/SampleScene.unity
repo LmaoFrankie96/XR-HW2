@@ -388,7 +388,7 @@ GameObject:
   - component: {fileID: 743590611}
   - component: {fileID: 743590614}
   - component: {fileID: 743590613}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -471,7 +471,7 @@ GameObject:
   - component: {fileID: 1010156559}
   - component: {fileID: 1010156561}
   - component: {fileID: 1010156560}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -862,7 +862,7 @@ GameObject:
   - component: {fileID: 7664195881239923715}
   - component: {fileID: 3363284496306338086}
   - component: {fileID: 7664195881239923716}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Lens
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -935,7 +935,7 @@ GameObject:
   - component: {fileID: 2485167944032090550}
   - component: {fileID: 8160978241024394575}
   - component: {fileID: 7601311409231737232}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Magnifying Glass
   m_TagString: Grabbable
   m_Icon: {fileID: 0}
