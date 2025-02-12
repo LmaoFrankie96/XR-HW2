@@ -1,16 +1,25 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class TwoHandedGrab : MonoBehaviour
 {
-    public Transform leftHand, rightHand; // Assign in Inspector
-    private Rigidbody grabbedObject;
-    private Transform grabbedTransform;
+    public InputActionProperty grabAction; // Assign in Inspector
+    public Transform otherHand; // Assign the opposite hand in Inspector
 
-    private bool isLeftGrabbing, isRightGrabbing;
-    private Vector3 leftGrabOffset, rightGrabOffset;
-    private Quaternion leftGrabRotationOffset, rightGrabRotationOffset;
+    private static Rigidbody grabbedObject; // Shared across both hands
+    private static Transform grabbedTransform;
+    private static TwoHandedGrab leftHandInstance, rightHandInstance;
 
-    public bool enableDoubleRotation = false; // Toggle for extra credit feature
+    private bool isGrabbing;
+    private static bool isLeftGrabbing, isRightGrabbing;
+    private Vector3 grabOffset;
+    private Quaternion grabRotationOffset;
+
+    private void Awake()
+    {
+        if (gameObject.name.ToLower().Contains("left")) leftHandInstance = this;
+        if (gameObject.name.ToLower().Contains("right")) rightHandInstance = this;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -18,72 +27,57 @@ public class TwoHandedGrab : MonoBehaviour
         {
             grabbedObject = other.GetComponent<Rigidbody>();
             grabbedTransform = grabbedObject.transform;
-            grabbedObject.isKinematic = true; // Prevent physics from interfering
-        }
-
-        if (other.gameObject == leftHand.gameObject)
-        {
-            isLeftGrabbing = true;
-            leftGrabOffset = grabbedTransform.position - leftHand.position;
-            leftGrabRotationOffset = Quaternion.Inverse(leftHand.rotation) * grabbedTransform.rotation;
-        }
-        else if (other.gameObject == rightHand.gameObject)
-        {
-            isRightGrabbing = true;
-            rightGrabOffset = grabbedTransform.position - rightHand.position;
-            rightGrabRotationOffset = Quaternion.Inverse(rightHand.rotation) * grabbedTransform.rotation;
+            Debug.Log("Grabbing area");
         }
     }
 
     private void Update()
     {
-        if (grabbedObject != null)
+        bool gripPressed = grabAction.action.ReadValue<float>() > 0.5f;
+
+        if (gripPressed && grabbedObject != null && !isGrabbing)
         {
+            isGrabbing = true;
+            grabbedObject.isKinematic = true; // Disable physics
+            grabOffset = grabbedTransform.position - transform.position;
+            grabRotationOffset = Quaternion.Inverse(transform.rotation) * grabbedTransform.rotation;
+            Debug.Log("Grip pressed");
+        }
+
+        if (!gripPressed && isGrabbing)
+        {
+            isGrabbing = false;
+            if (gameObject == leftHandInstance?.gameObject) isLeftGrabbing = false;
+            if (gameObject == rightHandInstance?.gameObject) isRightGrabbing = false;
+            if (!isLeftGrabbing && !isRightGrabbing && grabbedObject != null)
+            {
+                grabbedObject.isKinematic = false;
+                grabbedObject = null;
+            }
+            Debug.Log("Grip pressed and grabbing");
+        }
+
+        if (isGrabbing && grabbedObject != null)
+        {
+            if (!isLeftGrabbing && gameObject == leftHandInstance?.gameObject) isLeftGrabbing = true;
+            if (!isRightGrabbing && gameObject == rightHandInstance?.gameObject) isRightGrabbing = true;
+
             if (isLeftGrabbing && isRightGrabbing)
             {
-                // Compute new position: Midpoint between both hands
-                grabbedTransform.position = (leftHand.position + rightHand.position) / 2;
+                // Two-hand grabbing logic
+                Vector3 midPoint = (leftHandInstance.transform.position + rightHandInstance.transform.position) / 2;
+                grabbedTransform.position = midPoint;
 
-                // Compute combined rotation
-                Quaternion leftRotation = leftHand.rotation * leftGrabRotationOffset;
-                Quaternion rightRotation = rightHand.rotation * rightGrabRotationOffset;
-
-                Quaternion deltaRotation = rightRotation * Quaternion.Inverse(leftRotation);
-
-                if (enableDoubleRotation)
-                {
-                    // Double the rotation effect
-                    grabbedTransform.rotation = Quaternion.Slerp(Quaternion.identity, deltaRotation, 2f) * grabbedTransform.rotation;
-                }
-                else
-                {
-                    grabbedTransform.rotation = deltaRotation * grabbedTransform.rotation;
-                }
+                Quaternion leftRotation = leftHandInstance.transform.rotation * leftHandInstance.grabRotationOffset;
+                Quaternion rightRotation = rightHandInstance.transform.rotation * rightHandInstance.grabRotationOffset;
+                grabbedTransform.rotation = Quaternion.Slerp(leftRotation, rightRotation, 0.5f);
             }
-            else if (isLeftGrabbing)
+            else
             {
-                grabbedTransform.position = leftHand.position + leftGrabOffset;
-                grabbedTransform.rotation = leftHand.rotation * leftGrabRotationOffset;
+                // Single-hand grabbing logic
+                grabbedTransform.position = transform.position + grabOffset;
+                grabbedTransform.rotation = transform.rotation * grabRotationOffset;
             }
-            else if (isRightGrabbing)
-            {
-                grabbedTransform.position = rightHand.position + rightGrabOffset;
-                grabbedTransform.rotation = rightHand.rotation * rightGrabRotationOffset;
-            }
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject == leftHand.gameObject)
-            isLeftGrabbing = false;
-        if (other.gameObject == rightHand.gameObject)
-            isRightGrabbing = false;
-
-        if (!isLeftGrabbing && !isRightGrabbing && grabbedObject != null)
-        {
-            grabbedObject.isKinematic = false; // Re-enable physics when released
-            grabbedObject = null;
         }
     }
 }
