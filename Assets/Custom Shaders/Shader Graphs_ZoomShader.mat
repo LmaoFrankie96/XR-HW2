@@ -40,7 +40,7 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _ZoomAmount: 0.1
+    - _ZoomAmount: 0.452
     m_Colors:
     - _ObjectScreenPosition: {r: 0.52066797, g: 0.4553746, b: 0, a: 0}
   m_BuildTextureStacks: []
