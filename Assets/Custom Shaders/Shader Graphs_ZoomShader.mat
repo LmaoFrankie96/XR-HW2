@@ -42,7 +42,7 @@ Material:
     - _QueueOffset: 0
     - _ZoomAmount: 0.528
     m_Colors:
-    - _ObjectScreenPosition: {r: 0.23509325, g: 0.54048014, b: 0, a: 0}
+    - _ObjectScreenPosition: {r: -0.017913759, g: 2.1913276, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &3849960999866117797
 MonoBehaviour:
