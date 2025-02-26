@@ -81,12 +81,12 @@ PrefabInstance:
     - target: {fileID: -8315748042697645880, guid: a95c187bd01e093468eaceedecb3abd1,
         type: 3}
       propertyPath: m_Name
-      value: ThumbLeft
+      value: Bone.016
       objectReference: {fileID: 0}
     - target: {fileID: -8108085122129792975, guid: a95c187bd01e093468eaceedecb3abd1,
         type: 3}
       propertyPath: m_Name
-      value: MiddleLeft
+      value: Bone.005
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: a95c187bd01e093468eaceedecb3abd1,
         type: 3}
@@ -96,12 +96,12 @@ PrefabInstance:
     - target: {fileID: -4094324337836264417, guid: a95c187bd01e093468eaceedecb3abd1,
         type: 3}
       propertyPath: m_Name
-      value: PinkyLeft
+      value: Bone.012
       objectReference: {fileID: 0}
     - target: {fileID: -3540272279435206582, guid: a95c187bd01e093468eaceedecb3abd1,
         type: 3}
       propertyPath: m_Name
-      value: RingLeft
+      value: Bone.001
       objectReference: {fileID: 0}
     - target: {fileID: -282209062692460335, guid: a95c187bd01e093468eaceedecb3abd1,
         type: 3}
@@ -121,7 +121,7 @@ PrefabInstance:
     - target: {fileID: 6905609870639353253, guid: a95c187bd01e093468eaceedecb3abd1,
         type: 3}
       propertyPath: m_Name
-      value: IndexLeft
+      value: Bone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

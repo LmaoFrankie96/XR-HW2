@@ -62,4 +62,4 @@ AvatarMask:
   - m_Path: Armature/Bone.016/Bone.019/Bone.018/Bone.018_end
     m_Weight: 1
   - m_Path: Null
-    m_Weight: 1
+    m_Weight: 0
