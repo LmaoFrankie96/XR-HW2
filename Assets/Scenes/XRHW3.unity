@@ -539,79 +539,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6613382817231487469}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1473476036
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: a95c187bd01e093468eaceedecb3abd1,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.148012
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a95c187bd01e093468eaceedecb3abd1,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.20366398
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a95c187bd01e093468eaceedecb3abd1,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.668067
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a95c187bd01e093468eaceedecb3abd1,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a95c187bd01e093468eaceedecb3abd1,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a95c187bd01e093468eaceedecb3abd1,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a95c187bd01e093468eaceedecb3abd1,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a95c187bd01e093468eaceedecb3abd1,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a95c187bd01e093468eaceedecb3abd1,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a95c187bd01e093468eaceedecb3abd1,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: a95c187bd01e093468eaceedecb3abd1,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 374c12f2408031a448eb4bb463d58a35, type: 2}
-    - target: {fileID: 919132149155446097, guid: a95c187bd01e093468eaceedecb3abd1,
-        type: 3}
-      propertyPath: m_Name
-      value: Hand
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a95c187bd01e093468eaceedecb3abd1, type: 3}
 --- !u!1 &1476536832
 GameObject:
   m_ObjectHideFlags: 0
@@ -3208,6 +3135,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Poke Interactor
       objectReference: {fileID: 0}
+    - target: {fileID: 4125421792874400280, guid: 27024f5809f4a4347b9cd7f26a1bdf93,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8259524632637961923, guid: 27024f5809f4a4347b9cd7f26a1bdf93,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3793,7 +3725,7 @@ MonoBehaviour:
   m_UpdateTrackingType: 0
   m_EnableInputTracking: 1
   m_EnableInputActions: 1
-  m_ModelPrefab: {fileID: 8270855663187062767, guid: 1392f805216c47742996d4742c80721c,
+  m_ModelPrefab: {fileID: 8639162993117615558, guid: 1d3d0dbde95e285438f0fb8f57aeca18,
     type: 3}
   m_ModelParent: {fileID: 6613382817231487469}
   m_Model: {fileID: 0}
@@ -4321,7 +4253,7 @@ MonoBehaviour:
   m_UpdateTrackingType: 0
   m_EnableInputTracking: 1
   m_EnableInputActions: 1
-  m_ModelPrefab: {fileID: 3475118261464492563, guid: 9f3369e30fbd31f4bb596b1a99babe83,
+  m_ModelPrefab: {fileID: 7294492807884540785, guid: 0829292338697e045bf4b956cf5e0468,
     type: 3}
   m_ModelParent: {fileID: 6613382819085320460}
   m_Model: {fileID: 0}
@@ -5043,6 +4975,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Poke Interactor
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125421792874400280, guid: 27024f5809f4a4347b9cd7f26a1bdf93,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8259524632637961923, guid: 27024f5809f4a4347b9cd7f26a1bdf93,
         type: 3}
@@ -5957,4 +5894,3 @@ SceneRoots:
   - {fileID: 1476536836}
   - {fileID: 2287554416023703177}
   - {fileID: 2044734305225415179}
-  - {fileID: 1473476036}
