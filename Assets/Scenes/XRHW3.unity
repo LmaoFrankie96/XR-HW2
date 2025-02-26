@@ -3988,7 +3988,7 @@ GameObject:
   - component: {fileID: 6256342065523364416}
   - component: {fileID: 6613382817231487476}
   - component: {fileID: 6613382817231487478}
-  - component: {fileID: 6613382817231487477}
+  - component: {fileID: 6613382817231487479}
   m_Layer: 0
   m_Name: Left Controller
   m_TagString: Untagged
@@ -4017,23 +4017,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.01
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6613382817231487477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6613382817231487474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38fcc95d4500709498fec7843ffdf923, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nearObjects: []
-  grabbedObject: {fileID: 0}
-  action: {fileID: -1289947363739713011, guid: e0ca4504471ca124088e1e2cfe6804ae, type: 3}
-  action2: {fileID: 0}
-  doubleRotationText: {fileID: 0}
 --- !u!54 &6613382817231487478
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4061,6 +4044,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6613382817231487479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6613382817231487474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f673aa508563f46a489e15d3e31917, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hand: {fileID: 0}
 --- !u!81 &6613382818923520392
 AudioListener:
   m_ObjectHideFlags: 0
@@ -4515,8 +4511,8 @@ GameObject:
   - component: {fileID: 6613382819085320457}
   - component: {fileID: 534134082394765122}
   - component: {fileID: 6613382819085320463}
-  - component: {fileID: 6613382819085320465}
   - component: {fileID: 6613382819085320464}
+  - component: {fileID: 6613382819085320466}
   m_Layer: 0
   m_Name: Right Controller
   m_TagString: Untagged
@@ -4572,7 +4568,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6613382819085320465
+--- !u!114 &6613382819085320466
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4581,14 +4577,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6613382819085320461}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38fcc95d4500709498fec7843ffdf923, type: 3}
+  m_Script: {fileID: 11500000, guid: 95f673aa508563f46a489e15d3e31917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nearObjects: []
-  grabbedObject: {fileID: 0}
-  action: {fileID: -5194266436686895582, guid: e0ca4504471ca124088e1e2cfe6804ae, type: 3}
-  action2: {fileID: 11711766586467970, guid: e0ca4504471ca124088e1e2cfe6804ae, type: 3}
-  doubleRotationText: {fileID: 674370616}
+  hand: {fileID: 0}
 --- !u!1001 &6659631085777213963
 PrefabInstance:
   m_ObjectHideFlags: 0
