@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Grabbable
   - grabbable
+  - SpecialObject
   layers:
   - Default
   - TransparentFX

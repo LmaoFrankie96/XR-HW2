@@ -6,7 +6,8 @@ public class MagneticObject : MonoBehaviour
     private Rigidbody rb;
 
     public Vector3 attachOffset = new Vector3(-0.1f, 0, 0); // Adjust this value as needed
-    public float repelForce = 5f; // Adjust the force applied when repelling
+    public float repelForce = 100f; // Adjust the force applied when repelling
+    public bool shouldMoveTowardsPlayer = true; // Flag to control movement towards the player
 
     void Start()
     {
@@ -39,8 +40,14 @@ public class MagneticObject : MonoBehaviour
             // Calculate direction away from the hand
             Vector3 direction = (transform.position - hand.position).normalized; // Direction away from hand
             rb.AddForce(direction * repelForce, ForceMode.Impulse); // Apply force to push away
+            shouldMoveTowardsPlayer = false; // Stop moving towards player after repelling
         }
 
         attachedHand = null; // Reset the attached hand reference
+    }
+
+    public void AllowMovement()
+    {
+        shouldMoveTowardsPlayer = true; // Allow movement towards player again
     }
 }

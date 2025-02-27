@@ -19,7 +19,8 @@ public class MagneticHand : MonoBehaviour
 
         if (gripPressed && heldObject != null)
         {
-            heldObject.AttachToHand(transform);
+            if(heldObject.tag=="SpecialObject")
+                heldObject.AttachToHand(transform);
         }
 
         // Check if the trigger button is pressed for releasing
