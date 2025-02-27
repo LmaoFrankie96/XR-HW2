@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2346762723267370616}
   - component: {fileID: 3350802523404570149}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Bone.006_collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -65,7 +65,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7976847303155436325}
   - component: {fileID: 8196125287165350236}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Bone.018_end_collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -120,7 +120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1800020126824594757}
   - component: {fileID: 4929422286869900331}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Bone.004_collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +157,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -175,7 +175,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4522048964525194270}
   - component: {fileID: 8860215092820955680}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Bone.011_collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -212,7 +212,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -230,7 +230,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2707031812218526671}
   - component: {fileID: 6514397135764727607}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Bone.010_collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -267,7 +267,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -285,7 +285,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7593290056196032352}
   - component: {fileID: 4180660838179762396}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Bone.003_collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -322,7 +322,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -330,59 +330,6 @@ CapsuleCollider:
   m_Height: 0.0035171865
   m_Direction: 1
   m_Center: {x: 0.000008806118, y: 0.0010547261, z: 0.000015599004}
---- !u!1 &3236895142701091514
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 321605171650066895}
-  - component: {fileID: 7795622010868804815}
-  m_Layer: 8
-  m_Name: root_collider
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &321605171650066895
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3236895142701091514}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.0004949696, y: -0.7149176, z: 0.69920814, w: 0.00069513195}
-  m_LocalPosition: {x: -0.0076, y: 0.0037, z: -0.0405}
-  m_LocalScale: {x: 15.000024, y: 15.177929, z: 18.790205}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7294492807884540785}
-  m_LocalEulerAnglesHint: {x: 88.723, y: -175.66, z: 4.324}
---- !u!65 &7795622010868804815
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3236895142701091514}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.0032966745, y: 0.0082270345, z: 0.0072378186}
-  m_Center: {x: -0.00064183597, y: -0.0027676385, z: -0.001381099}
 --- !u!1 &3877620017840601601
 GameObject:
   m_ObjectHideFlags: 0
@@ -393,7 +340,7 @@ GameObject:
   m_Component:
   - component: {fileID: 488942319261254631}
   - component: {fileID: 5965768872114984516}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Bone.002_collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -430,7 +377,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -448,7 +395,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5717777202116671381}
   - component: {fileID: 7586899813105641536}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Bone.013_collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -485,7 +432,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -503,7 +450,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6497755414981098023}
   - component: {fileID: 9115996243923759413}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Bone.009_collider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -540,7 +487,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -558,7 +505,7 @@ GameObject:
   m_Component:
   - component: {fileID: 564199030049408527}
   - component: {fileID: 5312270632355512274}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Bone.009_collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -595,7 +542,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -613,7 +560,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4049327350857090859}
   - component: {fileID: 7001693984783015316}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Bone.014_collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -650,7 +597,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -668,7 +615,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7594581267570458541}
   - component: {fileID: 4155208139868771313}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Bone.018_collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -705,7 +652,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -723,7 +670,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4943881799735344861}
   - component: {fileID: 2943572157238845779}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Bone.015_collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -760,7 +707,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -778,7 +725,7 @@ GameObject:
   m_Component:
   - component: {fileID: 748780897082555444}
   - component: {fileID: 8169065114066447907}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Bone.007_collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -815,7 +762,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -833,7 +780,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2640280765664270624}
   - component: {fileID: 749250136767912383}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Bone.019_collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -870,7 +817,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -964,7 +911,7 @@ PrefabInstance:
     - target: {fileID: -8315748042697645880, guid: a95c187bd01e093468eaceedecb3abd1,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8108085122129792975, guid: a95c187bd01e093468eaceedecb3abd1,
         type: 3}
@@ -974,12 +921,12 @@ PrefabInstance:
     - target: {fileID: -8108085122129792975, guid: a95c187bd01e093468eaceedecb3abd1,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7686609989614500704, guid: a95c187bd01e093468eaceedecb3abd1,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: a95c187bd01e093468eaceedecb3abd1,
         type: 3}
@@ -989,22 +936,22 @@ PrefabInstance:
     - target: {fileID: -5812679360318361222, guid: a95c187bd01e093468eaceedecb3abd1,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -5668247447881797583, guid: a95c187bd01e093468eaceedecb3abd1,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -5248562244442704633, guid: a95c187bd01e093468eaceedecb3abd1,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4388680750337458582, guid: a95c187bd01e093468eaceedecb3abd1,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4094324337836264417, guid: a95c187bd01e093468eaceedecb3abd1,
         type: 3}
@@ -1014,7 +961,7 @@ PrefabInstance:
     - target: {fileID: -4094324337836264417, guid: a95c187bd01e093468eaceedecb3abd1,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -3540272279435206582, guid: a95c187bd01e093468eaceedecb3abd1,
         type: 3}
@@ -1024,32 +971,32 @@ PrefabInstance:
     - target: {fileID: -3540272279435206582, guid: a95c187bd01e093468eaceedecb3abd1,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -2753606322437930735, guid: a95c187bd01e093468eaceedecb3abd1,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -1765827329881583152, guid: a95c187bd01e093468eaceedecb3abd1,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -1661250940520155478, guid: a95c187bd01e093468eaceedecb3abd1,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -1090232563499492651, guid: a95c187bd01e093468eaceedecb3abd1,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -984135050720771062, guid: a95c187bd01e093468eaceedecb3abd1,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -282209062692460335, guid: a95c187bd01e093468eaceedecb3abd1,
         type: 3}
@@ -1059,7 +1006,7 @@ PrefabInstance:
     - target: {fileID: 544459876945842272, guid: a95c187bd01e093468eaceedecb3abd1,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a95c187bd01e093468eaceedecb3abd1,
         type: 3}
@@ -1069,27 +1016,27 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a95c187bd01e093468eaceedecb3abd1,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1102558472123362763, guid: a95c187bd01e093468eaceedecb3abd1,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3295464275771937363, guid: a95c187bd01e093468eaceedecb3abd1,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3377632431135299949, guid: a95c187bd01e093468eaceedecb3abd1,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3846143163814910137, guid: a95c187bd01e093468eaceedecb3abd1,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: a95c187bd01e093468eaceedecb3abd1,
         type: 3}
@@ -1099,12 +1046,12 @@ PrefabInstance:
     - target: {fileID: 6091589508044139403, guid: a95c187bd01e093468eaceedecb3abd1,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6565412058246623116, guid: a95c187bd01e093468eaceedecb3abd1,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6905609870639353253, guid: a95c187bd01e093468eaceedecb3abd1,
         type: 3}
@@ -1114,35 +1061,31 @@ PrefabInstance:
     - target: {fileID: 6905609870639353253, guid: a95c187bd01e093468eaceedecb3abd1,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7036213049465896255, guid: a95c187bd01e093468eaceedecb3abd1,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7238224567877159757, guid: a95c187bd01e093468eaceedecb3abd1,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7888192453380272842, guid: a95c187bd01e093468eaceedecb3abd1,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8233430256540759791, guid: a95c187bd01e093468eaceedecb3abd1,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: a95c187bd01e093468eaceedecb3abd1,
-        type: 3}
-      insertIndex: 1
-      addedObject: {fileID: 321605171650066895}
     - targetCorrespondingSourceObject: {fileID: -7236869174330588065, guid: a95c187bd01e093468eaceedecb3abd1,
         type: 3}
       insertIndex: -1
@@ -1242,12 +1185,6 @@ Transform:
 --- !u!4 &6827633003080542362 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4355306262183642112, guid: a95c187bd01e093468eaceedecb3abd1,
-    type: 3}
-  m_PrefabInstance: {fileID: 7111614763941293210}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &7294492807884540785 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a95c187bd01e093468eaceedecb3abd1,
     type: 3}
   m_PrefabInstance: {fileID: 7111614763941293210}
   m_PrefabAsset: {fileID: 0}
