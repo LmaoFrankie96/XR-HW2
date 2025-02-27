@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 205425904}
   - component: {fileID: 205425903}
   - component: {fileID: 205425907}
+  - component: {fileID: 205425908}
   m_Layer: 0
   m_Name: SpecialElement
   m_TagString: Untagged
@@ -240,6 +241,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d258ea2775dc174cb6c7e7d30d8ef8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &205425908
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205425902}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1152,12 +1180,11 @@ MonoBehaviour:
   m_InteractionManager: {fileID: 0}
   m_StartingGroupMembers:
   - {fileID: 7490601118585404248}
-  - {fileID: 0}
+  - {fileID: 586217286294005033}
   - {fileID: 4329567342515665247}
   m_StartingInteractionOverridesMap:
   - groupMember: {fileID: 7490601118585404248}
-    overrideGroupMembers:
-    - {fileID: 0}
+    overrideGroupMembers: []
 --- !u!114 &586217286294005033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1716,7 +1743,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ManipulationInteractionGroup: {fileID: 534134082394765122}
-  m_DirectInteractor: {fileID: 0}
+  m_DirectInteractor: {fileID: 586217286294005033}
   m_RayInteractor: {fileID: 4329567342515665247}
   m_TeleportInteractor: {fileID: 6659631085777213966}
   m_TeleportModeActivate: {fileID: -8061240218431744966, guid: c348712bda248c246b8c49b3db54643f,
@@ -2150,7 +2177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ManipulationInteractionGroup: {fileID: 6256342065523364416}
-  m_DirectInteractor: {fileID: 0}
+  m_DirectInteractor: {fileID: 8302270615190099873}
   m_RayInteractor: {fileID: 4585761718793676246}
   m_TeleportInteractor: {fileID: 9049041562417970709}
   m_TeleportModeActivate: {fileID: 1263111715868034790, guid: c348712bda248c246b8c49b3db54643f,
@@ -3932,12 +3959,11 @@ MonoBehaviour:
   m_InteractionManager: {fileID: 0}
   m_StartingGroupMembers:
   - {fileID: 5047570277414756177}
-  - {fileID: 0}
+  - {fileID: 8302270615190099873}
   - {fileID: 4585761718793676246}
   m_StartingInteractionOverridesMap:
   - groupMember: {fileID: 5047570277414756177}
-    overrideGroupMembers:
-    - {fileID: 0}
+    overrideGroupMembers: []
 --- !u!1 &6453151091028849247
 GameObject:
   m_ObjectHideFlags: 0
@@ -4354,7 +4380,6 @@ GameObject:
   - component: {fileID: 6256342065523364416}
   - component: {fileID: 6613382817231487478}
   - component: {fileID: 6613382817231487479}
-  - component: {fileID: 6613382817231487480}
   m_Layer: 0
   m_Name: Left Controller
   m_TagString: Untagged
@@ -4402,31 +4427,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 0}
---- !u!114 &6613382817231487480
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6613382817231487474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 667522a026ec92d4ea64c78c91b26070, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gripButton:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Grip Button
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: e427f190-5b2b-47a1-a556-f0e61a22efd4
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: -8514278639596572500, guid: e0ca4504471ca124088e1e2cfe6804ae,
-      type: 3}
 --- !u!81 &6613382818923520392
 AudioListener:
   m_ObjectHideFlags: 0
@@ -4882,6 +4882,8 @@ GameObject:
   - component: {fileID: 534134082394765122}
   - component: {fileID: 6613382819085320464}
   - component: {fileID: 6613382819085320466}
+  - component: {fileID: 6613382819085320468}
+  - component: {fileID: 6613382819085320467}
   m_Layer: 0
   m_Name: Right Controller
   m_TagString: Untagged
@@ -4929,6 +4931,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 0}
+--- !u!114 &6613382819085320467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6613382819085320461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 667522a026ec92d4ea64c78c91b26070, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gripButton:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Grip Button
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 0e917b92-d5db-4558-a3d3-3708555553fa
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -5194266436686895582, guid: e0ca4504471ca124088e1e2cfe6804ae,
+      type: 3}
+--- !u!135 &6613382819085320468
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6613382819085320461}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.13
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &6659631085777213963
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5906,6 +5954,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8302270615190099870}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8302270615190099873 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 664489801923019586, guid: 2fd3e07afe5b461490fb8e314976b1b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 8302270615190099870}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4253f32900bcc4d499d675566142ded0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!222 &8687005618845080631
 CanvasRenderer:
   m_ObjectHideFlags: 0

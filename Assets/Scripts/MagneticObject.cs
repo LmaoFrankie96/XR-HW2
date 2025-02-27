@@ -22,13 +22,13 @@ public class MagneticObject : MonoBehaviour
 
     public void AttachToHand(Transform hand)
     {
-        attachedHand = hand;
         rb.isKinematic = true; // Disable physics while holding
+        attachedHand = hand;
     }
 
     public void Release()
     {
-        attachedHand = null;
         rb.isKinematic = false; // Re-enable physics so it stays in place
+        attachedHand = null;
     }
 }

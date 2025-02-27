@@ -8,11 +8,17 @@ public class MagneticHand : MonoBehaviour
 
     void Update()
     {
-        if (gripButton.action.WasPressedThisFrame() && heldObject != null)
+        bool gripPressed = gripButton.action.ReadValue<float>() > 0.1f;
+        if (gripPressed)
+        {
+            Debug.Log("GripButton pressed");
+        }
+        if (gripPressed && heldObject != null)
         {
             heldObject.AttachToHand(transform);
+            Debug.Log("GripButton pressed");
         }
-        if (gripButton.action.WasReleasedThisFrame() && heldObject != null)
+        if (!gripPressed && heldObject != null)
         {
             heldObject.Release();
             heldObject = null;
@@ -25,6 +31,7 @@ public class MagneticHand : MonoBehaviour
         if (obj != null)
         {
             heldObject = obj; // Store the object when hand enters the collider
+            Debug.Log("Trigger matched");
         }
     }
 
