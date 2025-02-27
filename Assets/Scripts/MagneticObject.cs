@@ -5,6 +5,9 @@ public class MagneticObject : MonoBehaviour
     private Transform attachedHand = null;
     private Rigidbody rb;
 
+    // Define an offset for the object when attached
+    public Vector3 attachOffset = new Vector3(-0.1f, 0, 0); // Adjust this value as needed
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -14,8 +17,8 @@ public class MagneticObject : MonoBehaviour
     {
         if (attachedHand != null)
         {
-            // Move object to hand position
-            transform.position = attachedHand.position;
+            // Move object to hand position with an offset
+            transform.position = attachedHand.position + attachedHand.TransformDirection(attachOffset);
             transform.rotation = attachedHand.rotation;
         }
     }
