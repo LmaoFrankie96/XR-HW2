@@ -4,7 +4,7 @@ public class MagneticObject : MonoBehaviour
 {
     private Transform attachedHand = null;
     private Rigidbody rb;
-
+    public static bool winCondition;
     public Vector3 attachOffset = new Vector3(-0.1f, 0, 0); // Adjust this value as needed
     public float repelForce = 100f; // Adjust the force applied when repelling
     public bool shouldMoveTowardsPlayer = true; // Flag to control movement towards the player
@@ -28,6 +28,7 @@ public class MagneticObject : MonoBehaviour
     {
         rb.isKinematic = true; // Disable physics while holding
         attachedHand = hand;
+        winCondition = true;
     }
 
     public void Release(Transform hand)

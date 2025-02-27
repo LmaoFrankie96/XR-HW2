@@ -8,9 +8,10 @@ public class PlanetMove : MonoBehaviour
     private Vector3 startPosition; // Initial position of the object
     private Vector3 targetPosition; // Target position (player's position)
     private float startTime; // Time when movement starts
-
+   // private MagneticObject magneticObject; // Reference to MagneticObject component
     private void Start()
     {
+       // magneticObject = GetComponent<MagneticObject>();
         if (player == null)
         {
             player = Camera.main.transform; // Default to the main camera if player is not set
@@ -20,10 +21,17 @@ public class PlanetMove : MonoBehaviour
 
     private void Update()
     {
-        if (isMoving)
-        {
-            MoveTowardsPlayer();
-        }
+        
+
+            if (MagneticObject.winCondition == false)
+            {
+                if (isMoving)
+                {
+                    MoveTowardsPlayer();
+                }
+            }
+        
+        
     }
 
     public void StartMoving()

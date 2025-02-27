@@ -20,7 +20,7 @@ public class ObjectSpawner : MonoBehaviour
     {
         float timer = 0f;
 
-        while (timer < gameDuration)
+        while (timer < gameDuration && MagneticObject.winCondition==false)
         {
             // Check if it's time to spawn a special object
             bool specialSpawned = false;

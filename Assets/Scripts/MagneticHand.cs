@@ -6,7 +6,7 @@ public class MagneticHand : MonoBehaviour
     public InputActionReference gripButton; // Assign from inspector
     public InputActionReference triggerButton; // Assign from inspector for release
     private MagneticObject heldObject = null;
-
+    
     private void Start()
     {
         gripButton.action.Enable();
@@ -19,8 +19,13 @@ public class MagneticHand : MonoBehaviour
 
         if (gripPressed && heldObject != null)
         {
-            if(heldObject.tag=="SpecialObject")
+            if (heldObject.tag == "SpecialObject")
+            {
+
                 heldObject.AttachToHand(transform);
+                //winCondition = true;
+
+            }
         }
 
         // Check if the trigger button is pressed for releasing
