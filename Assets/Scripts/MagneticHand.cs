@@ -16,23 +16,22 @@ public class MagneticHand : MonoBehaviour
     void Update()
     {
         bool gripPressed = gripButton.action.IsPressed();
-        bool triggerPressed = triggerButton.action.IsPressed(); // Check if trigger is pressed
 
-        // Attach the object if the grip button is pressed and an object is detected
         if (gripPressed && heldObject != null)
         {
             heldObject.AttachToHand(transform);
-            Debug.Log("Object attached: " + heldObject.name);
         }
 
-        // Release the object if the trigger button is pressed
+        // Check if the trigger button is pressed for releasing
+        bool triggerPressed = triggerButton.action.IsPressed(); // Assuming you have an InputActionReference for the trigger button
+
         if (triggerPressed && heldObject != null)
         {
-            heldObject.Release(); // Call the release method in MagneticObject
-            // Do not clear heldObject here, so it can be reattached
-            Debug.Log("Object released: " + heldObject.name);
+            heldObject.Release(transform); // Pass the current hand transform
+            heldObject = null; // Reset held object reference
         }
     }
+
 
     private void OnTriggerEnter(Collider other)
     {

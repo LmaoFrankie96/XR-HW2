@@ -5,8 +5,8 @@ public class MagneticObject : MonoBehaviour
     private Transform attachedHand = null;
     private Rigidbody rb;
 
-    // Define an offset for the object when attached
     public Vector3 attachOffset = new Vector3(-0.1f, 0, 0); // Adjust this value as needed
+    public float repelForce = 5f; // Adjust the force applied when repelling
 
     void Start()
     {
@@ -29,9 +29,18 @@ public class MagneticObject : MonoBehaviour
         attachedHand = hand;
     }
 
-    public void Release()
+    public void Release(Transform hand)
     {
         rb.isKinematic = false; // Re-enable physics so it stays in place
-        attachedHand = null;
+
+        // Always apply repelling force when releasing
+        if (hand != null)
+        {
+            // Calculate direction away from the hand
+            Vector3 direction = (transform.position - hand.position).normalized; // Direction away from hand
+            rb.AddForce(direction * repelForce, ForceMode.Impulse); // Apply force to push away
+        }
+
+        attachedHand = null; // Reset the attached hand reference
     }
 }
